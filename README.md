@@ -2,6 +2,10 @@
 
 A convolutional neural network that classifies handwritten digits (0-9) from the MNIST dataset, with an interactive web interface for drawing digits and getting real-time predictions.
 
+## Demo
+
+![Demo](samplevid.gif)
+
 ## Tech Stack
 
 - **TensorFlow / Keras** — model training and inference
