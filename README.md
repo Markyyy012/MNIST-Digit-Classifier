@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MNIST CNN Digit Classifier
 
 A convolutional neural network that classifies handwritten digits (0-9) from the MNIST dataset, with an interactive web interface for drawing digits and getting real-time predictions.
@@ -107,3 +108,6 @@ This downloads the MNIST dataset, trains the CNN, prints the final test accuracy
 
 - The model file (~13 MB) is committed directly to the repository (under GitHub's 50 MB warning limit). Consider Git LFS if the model grows larger.
 - The backend preprocesses drawings using standard MNIST conventions: grayscale conversion, thresholding, bounding-box cropping, and centering the digit in a 28×28 canvas.
+=======
+# MNIST-Digit-Classifier
+>>>>>>> 704cde64cfd2efc4107dd77b0f8ba4de56f0b303
