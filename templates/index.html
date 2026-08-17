@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MNIST Digit Classifier</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <main class="container">
+    <h1>MNIST Digit Classifier</h1>
+    <p class="subtitle">Draw a digit (0&ndash;9) in the box, then test it.</p>
+
+    <div class="layout">
+      <section class="panel draw-panel">
+        <canvas id="canvas" width="280" height="280"></canvas>
+        <div class="controls">
+          <button id="predict-btn" class="btn primary">Test My Digit</button>
+          <button id="clear-btn" class="btn">Clear Canvas</button>
+        </div>
+      </section>
+
+      <section class="panel result-panel">
+        <div class="result-main">
+          <div class="prediction-box">
+            <span class="prediction-label">Prediction</span>
+            <span id="prediction" class="prediction-value">&ndash;</span>
+          </div>
+          <div class="confidence-box">
+            <span class="confidence-label">Confidence</span>
+            <span id="confidence" class="confidence-value">&ndash;</span>
+          </div>
+        </div>
+
+        <div class="bars" id="bars">
+          <div class="bar-row" data-digit="0"><span class="bar-digit">0</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="bar-row" data-digit="1"><span class="bar-digit">1</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="bar-row" data-digit="2"><span class="bar-digit">2</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="bar-row" data-digit="3"><span class="bar-digit">3</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="bar-row" data-digit="4"><span class="bar-digit">4</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="bar-row" data-digit="5"><span class="bar-digit">5</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="bar-row" data-digit="6"><span class="bar-digit">6</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="bar-row" data-digit="7"><span class="bar-digit">7</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="bar-row" data-digit="8"><span class="bar-digit">8</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="bar-row" data-digit="9"><span class="bar-digit">9</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+        </div>
+
+        <div class="thumbnail-box">
+          <span class="thumbnail-label">What the model sees (28&times;28)</span>
+          <canvas id="thumbnail" width="140" height="140"></canvas>
+        </div>
+
+        <p id="error" class="error" hidden></p>
+      </section>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
